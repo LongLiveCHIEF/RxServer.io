@@ -1,0 +1,28 @@
+{
+  "name": "@h3/rx-server.io",
+  "version": "0.0.0",
+  "description": "A Reactive, real-time, asynch composable socket.io and http server",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LongLiveCHIEF/RxServer.io.git"
+  },
+  "keywords": [
+    "rxjs",
+    "socket.io",
+    "node.js",
+    "websockets",
+    "reactive",
+    "server",
+    "real-tie"
+  ],
+  "author": "Brian Vanderbusch <brian.vanderbusch.qsho@statefarm.com> (https://github.com/CHIEFnChowCombo)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/LongLiveCHIEF/RxServer.io/issues"
+  },
+  "homepage": "https://github.com/LongLiveCHIEF/RxServer.io#readme"
+}
