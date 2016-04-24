@@ -1,9 +1,6 @@
-var Server = require('../index.js');
+var authenticated = require('../authenticated');
 
-module.exports = Rx.Observable.create(function(observer));
-
-observer.onNext(function(event){
-  return {team: A, event: event}
-})
-
-observer.onError();
+module.exports = authenticated.filter(function(connection){
+  connection.team = A;
+  return connection;
+});
