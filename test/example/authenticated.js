@@ -1,22 +1,18 @@
 var Server = require('./server');
 var Rx = require('rxjs/rx');
 
-var connections = Server
+module.exports = Server
   .filter(function(event){
     return 'connected';
+  })
+  .forEach(function(connection){
+    return authenticate(connection);
   });
 
-var authenticated = Rx.Observable.create(function(obs){
-    obs.onNext(authenticate);
-    obs.onError("user not authenticated");
-    obs.onCompleted();
-});
-
-function authenticate(user){
-  if(user == "chief"){
-      return true;
+function authenticate(connection){
+  if(connection.user == "chief"){
+      return connection;
   } else {
-    return false;
+    return new Error("user not authenticated");
   }
 };
-module.exports = authenticated;
